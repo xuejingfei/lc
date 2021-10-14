@@ -2,6 +2,12 @@ package string;
 
 public class Multiply {
 
+    /**
+     * 两数相乘
+     * @param num1
+     * @param num2
+     * @return
+     */
     private String multiply(String num1,String num2) {
         if (num1.equals("0") || num2.equals("0")) {
             return "0";
