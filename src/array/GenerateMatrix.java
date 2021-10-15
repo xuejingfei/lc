@@ -2,6 +2,14 @@ package array;
 
 public class GenerateMatrix {
 
+
+    /**
+     * 根据数字顺时针生成矩阵
+     * 123
+     * 654
+     * @param n
+     * @return
+     */
     public int[][] generateMatrix(int n) {
         int num = 1;
         int[][] matrix = new int[n - 1][n - 1];

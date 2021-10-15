@@ -1,6 +1,13 @@
 package dynamic;
 
 public class UniquePaths {
+    /**
+     * 寻找所有的路径
+     * f[i][j] = f[i][j-1] + f[i-1][j]
+     * @param m
+     * @param n
+     * @return
+     */
     public int uniquePaths(int m,int n) {
         int[][] f = new int[m][n];
         for(int i=0;i<m;i++) f[i][0]=1;
