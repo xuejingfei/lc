@@ -1,7 +1,7 @@
 package tree;
 
 public class MaxPathSum {
-    int maxPathSum = 0;
+    int maxPathSum = Integer.MIN_VALUE;
 
     public int maxPathSum(TreeNode root) {
         if (root == null) return 0;
