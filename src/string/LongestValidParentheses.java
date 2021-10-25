@@ -2,6 +2,14 @@ package string;
 
 public class LongestValidParentheses {
 
+
+    /**
+     * 最长有效括号
+     * 时间复杂度:O(n)
+     * 空间复杂度:O(1)
+     * @param s
+     * @return
+     */
     public int longestValidParentheses(String s) {
         int left = 0;
         int right = 0;
