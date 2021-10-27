@@ -2,6 +2,12 @@ package list;
 
 public class RemoveNthFromEnd {
 
+    /**
+     * 删除倒数第N的节点
+     * @param head
+     * @param n
+     * @return
+     */
     public ListNode removeNthFromEnd(ListNode head,int n) {
         ListNode dummp = new ListNode(-1,head);
         ListNode slow = dummp;

@@ -2,6 +2,12 @@ package list;
 
 public class ReverseKList {
 
+    /**
+     * 以K个为一组反转单链表
+     * @param head
+     * @param k
+     * @return
+     */
     public ListNode reverseKList(ListNode head, int k) {
         if (head == null || head.next ==null) return head;
         ListNode dump = new ListNode(-1);
