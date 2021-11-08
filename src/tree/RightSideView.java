@@ -17,18 +17,15 @@ public class RightSideView {
         if (root == null) return result;
         LinkedList<TreeNode> queue = new LinkedList<>();
         queue.add(root);
-        TreeNode lastNode = null;
         while (!queue.isEmpty()) {
             int size = queue.size();
             for(int i =0;i<size;i++) {
                 TreeNode top = queue.poll();
-                if (i == size-1) {
-                    lastNode = top;
-                }
+                if (i == size-1) result.add(top.val);
                 if (top.left!=null) queue.add(top.left);
                 if (top.right!=null) queue.add(top.right);
             }
-            result.add(lastNode.val);
+
         }
         return result;
     }
