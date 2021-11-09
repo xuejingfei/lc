@@ -4,7 +4,8 @@ public class SortArray {
 
     /**
      * 快速排序
-     *
+     * 时间复杂度 O(nlogn)
+     * 空间复杂度 O(n)
      * @param nums
      */
     public void sortArray(int[] nums) {
