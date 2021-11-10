@@ -33,9 +33,9 @@ public class PostOrderTraversal {
             TreeNode top = stack.poll();
             if (top !=null) {
                 stack.push(top);
-                stack.add(null);
-                if (top.right!=null) stack.add(top.right);
-                if (top.left!=null) stack.add(top.left);
+                stack.add(null);//中
+                if (top.right!=null) stack.add(top.right);//右
+                if (top.left!=null) stack.add(top.left);//左
             } else {
                 TreeNode node = stack.poll();
                 ans.add(node.val);

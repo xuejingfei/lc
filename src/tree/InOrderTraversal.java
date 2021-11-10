@@ -33,10 +33,10 @@ public class InOrderTraversal {
         while (!stack.isEmpty()) {
             TreeNode top = stack.pop();
             if (top!=null) {
+                if (top.right !=null) stack.push(top.right);//右
                 stack.push(top);
-                stack.push(null);
-                if (top.right !=null) stack.push(top.right);
-                if (top.left !=null) stack.push(top.left);
+                stack.push(null);//中
+                if (top.left !=null) stack.push(top.left); // 左
             } else {
                 TreeNode node = stack.pop();
                 ans.add(node.val);
