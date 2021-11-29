@@ -27,15 +27,16 @@ public class Singleton {
 
     private static volatile Singleton instance;
     public static Singleton getInstance1() {
-        if (instance ==null) {
+        if (instance ==null) {//防止阻塞造成性能问题
             synchronized (Singleton.class) {
-                if (instance ==null) {
+                if (instance ==null) { //防止A，B同时执行Synchronized造成重复创建实例
                     instance = new Singleton();
                 }
             }
         }
         return instance;
     }
+
 
 
 
