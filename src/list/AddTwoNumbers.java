@@ -3,29 +3,33 @@ package list;
 public class AddTwoNumbers {
 
     /**
-     * 两个链表之和
+     *
+     * 两数相加
+     * Link：https://leetcode-cn.com/problems/add-two-numbers/
      * @param l1
      * @param l2
      * @return
      */
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        ListNode dummp = new ListNode(-1);
-        ListNode tail = dummp;
+        ListNode dummy = new ListNode(0);
+        ListNode cur = dummy;
         int carry = 0;
-        while (l1 != null || l2 != null) {
-            int v1 = l1 != null ? l1.val : 0;
-            int v2 = l2 != null ? l2.val : 0;
-            int sum  = v1 + v2 + carry;
-            int value = sum %10;
-            tail.next = new ListNode(value);
+        while (l1!=null || l2!=null) {
+            int v1 = l1!=null ? l1.val : 0;
+            int v2 = l2!=null ? l2.val : 0;
+            int sum = v1+v2 + carry;
+            cur.next = new ListNode(sum%10);
             carry = sum/10;
-            tail = tail.next;
             if (l1 !=null) l1 = l1.next;
             if (l2 !=null) l2 = l2.next;
+            cur = cur.next;
+
         }
+
         if (carry>0) {
-            tail.next = new ListNode(carry);
+            cur.next = new ListNode(carry);
         }
-        return dummp.next;
+
+        return dummy.next;
     }
 }

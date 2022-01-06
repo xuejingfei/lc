@@ -4,15 +4,16 @@ public class DetectCycle {
 
 
     /**
+     * https://leetcode-cn.com/problems/c32eOV/
      * 获取环形链表的入口
      * @param head
      * @return
      */
     private ListNode detectCycle(ListNode head) {
-        if (head == null || head.next ==null) return null;
-        ListNode slow = head;
+        if (head ==null || head.next == null) return null;
+        ListNode slow =  head;
         ListNode fast = head;
-        while (fast !=null && fast.next!=null) {
+        while (fast !=null && fast.next !=null) {
             slow = slow.next;
             fast = fast.next.next;
             if (slow == fast) {
@@ -24,7 +25,6 @@ public class DetectCycle {
                 return detectNode;
             }
         }
-
         return null;
     }
 }
