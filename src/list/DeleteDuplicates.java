@@ -1,15 +1,15 @@
 package list;
 
 
-import java.util.HashMap;
-import java.util.Map;
 
 public class DeleteDuplicates {
 
 
     /**
-     * 删除排序链表中的重复元素 II
+     * 删除排序链表中的重复元素
      * https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list-ii/
+     * 时间复杂度：O(n)
+     * 空间复杂度：O(1)
      * 关键点：
      * 1.借用虚拟节点保存头节点
      * 因为是升序，相同出现的位置是连续的
@@ -17,17 +17,16 @@ public class DeleteDuplicates {
      * @return
      */
     public ListNode deleteDuplicates(ListNode head) {
-        if (head == null) return null;
-        ListNode dummy = new ListNode(0,head);
+        ListNode dummy = new ListNode(-1,head);
         ListNode cur = dummy;
-        while (cur.next !=null && cur.next.next!=null) {
+        while (cur.next !=null && cur.next.next !=null) {
             if (cur.next.val == cur.next.next.val) {
-                int x = cur.next.val;
-                while (cur.next !=null&&cur.next.val == x) {
+                int val = cur.next.val;
+                while (cur.next !=null && cur.next.val == val) {
                     cur.next = cur.next.next;
                 }
-            } else {
-                cur  = cur.next;
+            }else {
+                cur = cur.next;
             }
         }
 

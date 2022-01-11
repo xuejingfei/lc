@@ -6,6 +6,8 @@ public class AddTwoNumbers {
      *
      * 两数相加
      * Link：https://leetcode-cn.com/problems/add-two-numbers/
+     * 时间复杂度O(n)
+     * 空间复杂度O(1)
      * @param l1
      * @param l2
      * @return

@@ -21,6 +21,8 @@ public class MergeKLists {
 
     private PriorityQueue<Status> queue = new PriorityQueue<>();
     /**
+     *
+     *
      * 合并k个升序链表
      * @return
      */

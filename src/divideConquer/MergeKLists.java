@@ -5,18 +5,24 @@ import list.ListNode;
 public class MergeKLists {
 
 
+    /**
+     * 合并k个升序链表
+     * https://leetcode-cn.com/problems/merge-k-sorted-lists/
+     * 时间复杂度:O(kn*log k)
+     * 空间复杂度:O(log k)
+     * @param lists
+     * @return
+     */
     public ListNode mergeKLists(ListNode[] lists) {
         if (lists.length == 0) return null;
         return mergeKLists(lists,0,lists.length-1);
     }
-
 
     public ListNode mergeKLists(ListNode[] lists,int i,int j) {
         if (i == j) return lists[i];
         int middle = (i+j)/2;
         return mergeTwoList(mergeKLists(lists,i,middle),mergeKLists(lists,middle+1,j));
     }
-
 
     public ListNode mergeTwoList(ListNode l1,ListNode l2) {
         ListNode dummp = new ListNode(-1);

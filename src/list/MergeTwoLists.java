@@ -4,6 +4,9 @@ public class MergeTwoLists {
 
     /**
      * 合并两个升序链表
+     * https://leetcode-cn.com/problems/merge-two-sorted-lists/
+     * 时间复杂度：O(n)
+     * 空间复杂度：O(1)
      * @param l1
      * @param l2
      */
