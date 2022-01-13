@@ -9,6 +9,7 @@ public class RightSideView {
 
     /**
      * 从顶部到底部的顺序，右侧看到的节点
+     *
      * @param root
      * @return
      */
@@ -25,7 +26,6 @@ public class RightSideView {
                 if (top.left!=null) queue.add(top.left);
                 if (top.right!=null) queue.add(top.right);
             }
-
         }
         return result;
     }

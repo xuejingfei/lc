@@ -8,6 +8,7 @@ public class InvertTree {
 
     /**
      * 反转二叉树(前序)
+     * https://leetcode-cn.com/problems/invert-binary-tree/
      * @param root
      */
     public TreeNode invertTree(TreeNode root) {

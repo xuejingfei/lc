@@ -7,6 +7,11 @@ import java.util.List;
 public class PostOrderTraversal {
 
 
+    /**
+     * 后序递归
+     * @param root
+     * @return
+     */
     public List<Integer> postOrderTraversal(TreeNode root) {
         List<Integer> ans = new ArrayList<>();
         postOrderTraversal(root,ans);
